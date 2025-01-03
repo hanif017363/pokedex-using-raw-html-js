@@ -3,6 +3,7 @@
 
 import { useContext } from "react";
 import { AppCtx } from "../context/AppCtx";
+import { Link } from "react-router-dom";
 
 export default function PokemonList() {
   const { pokemons, setFilter, typeColors, favorites, toggleFavorite } =
@@ -67,6 +68,9 @@ export default function PokemonList() {
                 >
                   {pokemon.name}
                 </h1>
+                <Link to={`/pokemon/${pokemon.id}`}>
+                  <button className="detail-btn">View Details</button>
+                </Link>
               </div>
             ))
           ) : (

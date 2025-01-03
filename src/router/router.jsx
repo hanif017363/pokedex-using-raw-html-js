@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Favourite from "../pages/Favourite";
-import Deck from "../pages/Deck";
+
 import Root from "../pages/RootLayout";
+import DetailPokemon from "../pages/DetailPokemon";
 
 export const router = createBrowserRouter([
   {
@@ -10,13 +11,10 @@ export const router = createBrowserRouter([
     element: <Root />,
     children: [
       { index: true, element: <App /> },
+      { path: "/pokemon/:postId", element: <DetailPokemon /> },
       {
         path: "/favourite",
         element: <Favourite />,
-      },
-      {
-        path: "/deck",
-        element: <Deck />,
       },
     ],
   },

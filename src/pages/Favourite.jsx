@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppCtx } from "../context/AppCtx";
 
 export default function Favourite() {
-  const { pokemons, favorites } = useContext(AppCtx);
+  const { pokemons, favorites, toggleFavorite } = useContext(AppCtx);
   return (
     <div>
       <div>
@@ -13,6 +13,17 @@ export default function Favourite() {
               .filter((pokemon) => favorites.includes(pokemon.id))
               .map((pokemon) => (
                 <div key={pokemon.id}>
+                  <div className="list-header">
+                    <p>#{pokemon.id}</p>
+                    <i
+                      className={`fa-heart ${
+                        favorites.includes(pokemon.id)
+                          ? "fa-solid favorited"
+                          : "fa-regular"
+                      }`}
+                      onClick={() => toggleFavorite(pokemon.id)}
+                    ></i>
+                  </div>
                   <img
                     src={`http://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
                     alt={pokemon.name}

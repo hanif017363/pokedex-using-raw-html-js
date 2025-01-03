@@ -24,9 +24,13 @@ export default function Root() {
         </NavLink>
         <NavLink
           to={"/deck"}
-          className={({ isActive }) => (isActive ? "active-link" : "not-link")}
+          className={({ isActive }) =>
+            isActive ? "active-pokeball" : "not-link"
+          }
         >
-          <img src="/src/assets/pokeball.svg" alt="" />
+          <div className="pokeball-container">
+            <img src="/src/assets/pokeball.svg" alt="Pokeball" />
+          </div>
         </NavLink>
       </div>
       <div id="details">

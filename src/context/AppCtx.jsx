@@ -16,17 +16,22 @@ export default function AppProvider({ children }) {
       `https://pokeapi.co/api/v2/pokemon?limit=${MAX_POKEMON}`
     );
     const data = await res.json();
+    console.log(data);
 
     const pokemonList = await Promise.all(
       data.results.map(async (pokemon) => {
         const res = await fetch(pokemon.url);
         const data = await res.json();
-        const types = data.types.map((type) => type.type.name);
 
-        return { ...pokemon, id: data.id, types };
+        const datas = {
+          id: data.id,
+          name: data.name,
+          types: data.types.map((type) => type.type.name),
+        };
+        return datas;
       })
     );
-    console.log(pokemonList);
+
     setPokemons(pokemonList);
     setFilteredPokemons(pokemonList);
   };
