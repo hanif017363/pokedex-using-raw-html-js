@@ -1,3 +1,35 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.active-link i {
+  color: red;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.not-link i {
+  color: white;
+}
+.fa-heart {
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+.fa-heart.favorited {
+  color: red;
+  background-color: red;
+  background-clip: text;
+  animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

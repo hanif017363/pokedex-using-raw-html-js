@@ -1,7 +1,12 @@
-/* eslint-disable react/prop-types */
+//* eslint-disable react/prop-types */
 //* eslint-disable react-hooks/exhaustive-deps */
 
-export default function PokemonList({ pokemons, setFilter, typeColors }) {
+import { useContext } from "react";
+import { AppCtx } from "../context/AppCtx";
+
+export default function PokemonList() {
+  const { pokemons, setFilter, typeColors, favorites, toggleFavorite } =
+    useContext(AppCtx);
   return (
     <div>
       <div className="body-wrapper">
@@ -36,10 +41,17 @@ export default function PokemonList({ pokemons, setFilter, typeColors }) {
           {pokemons ? (
             pokemons.map((pokemon) => (
               <div className="pokemon" key={pokemon.id}>
-           <div className="list-header">
-                 <p>#{pokemon.id}</p>
-                <i className="fa-regular fa-heart"></i>
-           </div>
+                <div className="list-header">
+                  <p>#{pokemon.id}</p>
+                  <i
+                    className={`fa-heart ${
+                      favorites.includes(pokemon.id)
+                        ? "fa-solid favorited"
+                        : "fa-regular"
+                    }`}
+                    onClick={() => toggleFavorite(pokemon.id)}
+                  ></i>
+                </div>
                 <img
                   src={`http://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
                   alt={pokemon.name}
