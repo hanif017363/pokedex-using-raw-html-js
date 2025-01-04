@@ -10,14 +10,21 @@ export default function Search() {
   return (
     <div>
       <div className="search-wrapper">
-        <img src={search} alt="" />
+        <img className="search-img" src={search} alt="" />
 
         <input
+          className="input-box"
           type="text"
           value={inputText}
           onChange={(e) => setInputText(e.target.value.toLowerCase())}
+          placeholder="Input Number or Name"
         />
-        <img src={cross} alt="" onClick={() => setInputText("")} />
+        <img
+          className="cross-img"
+          src={cross}
+          alt=""
+          onClick={() => setInputText("")}
+        />
       </div>
     </div>
   );

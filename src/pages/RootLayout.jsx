@@ -7,34 +7,32 @@ import { Outlet } from "react-router-dom";
 export default function Root() {
   return (
     <>
-      <Title />
-      <Search />
-      <div className="title-button">
-        <NavLink
-          to={"/"}
-          className={({ isActive }) => (isActive ? "active-link" : "not-link")}
-        >
-          <i className="fa-solid fa-house"></i>
-        </NavLink>
-        <NavLink
-          to={"/favourite"}
-          className={({ isActive }) => (isActive ? "active-link" : "not-link")}
-        >
-          <i className="fa-regular fa-heart"></i>
-        </NavLink>
-        <NavLink
-          to={"/deck"}
-          className={({ isActive }) =>
-            isActive ? "active-pokeball" : "not-link"
-          }
-        >
-          <div className="pokeball-container">
-            <img src="/src/assets/pokeball.svg" alt="Pokeball" />
+      <div className="container">
+        <Title />
+        <div className="header-section">
+          <Search />
+          <div className="title-button">
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive ? "active-link" : "not-link"
+              }
+            >
+              <i className="fa-solid fa-house"></i>
+            </NavLink>
+            <NavLink
+              to={"/favourite"}
+              className={({ isActive }) =>
+                isActive ? "active-link" : "not-link"
+              }
+            >
+              <i className="fa-regular fa-heart"></i>
+            </NavLink>
           </div>
-        </NavLink>
-      </div>
-      <div id="details">
-        <Outlet />
+        </div>
+        <div id="details">
+          <Outlet />
+        </div>
       </div>
     </>
   );

@@ -1,29 +1,103 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(120, 17, 216);
 }
-.active-link i {
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+/* Title comp start*/
+.heading {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.6rem;
+}
+.heading-title {
+  color: #fff;
+  margin: 0.6rem 0;
+}
+.heading-highlight {
   color: red;
-  background-color: transparent;
-  border-radius: 50%;
 }
-.active-pokeball .pokeball-container {
-  position: relative;
-  height: 22px;
-  width: 22px;
-  border: 1px solid white;
-  border-radius: 50%;
+/* Title comp end*/
+/* search comp start */
+.search-wrapper {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.pokeball-container img {
+  justify-content: start;
   position: relative;
-  z-index: 1;
-  height: 100%;
 }
+.search-img {
+  position: absolute;
+  left: 10px;
+  width: 5%;
+}
+.input-box {
+  outline: 0;
+  border: 1px red solid;
+  padding: 0.3rem 2rem;
+  border-radius: 1rem;
+}
+.cross-img {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 5%;
+}
+/* search comp end */
+/* root layout start */
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0.6rem;
+}
+/* root layout end */
+/* title button start */
+.title-button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.active-link i {
+  color: red;
+
+  font-size: 1.3rem;
+}
+
 .not-link i {
   color: white;
+  font-size: 1.3rem;
 }
+/* title button end */
+/* filter start */
+
+.filter-wrap {
+  appearance: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 1rem;
+  padding: 0.1rem 1rem;
+  background-color: #fff;
+  border: 1px red solid;
+  border-radius: 0.5rem;
+}
+
+.option-font {
+  font-size: 1rem;
+}
+/* filter end */
 .fa-heart {
   cursor: pointer;
   color: gray;

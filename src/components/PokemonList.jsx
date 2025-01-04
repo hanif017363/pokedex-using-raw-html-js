@@ -11,31 +11,70 @@ export default function PokemonList() {
   return (
     <div>
       <div className="body-wrapper">
-        <div className="filter-wrap">
+        <div className="filter-wrapper">
           <select
+            className="filter-wrap"
             name=""
             id="filter"
             onChange={(e) => setFilter(e.target.value)}
           >
-            <option value="all">All</option>
-            <option value="fire">fire</option>
-            <option value="water">water</option>
-            <option value="grass">grass</option>
-            <option value="electric">electric</option>
-            <option value="normal">normal</option>
-            <option value="ice">ice</option>
-            <option value="fighting">fighting</option>
-            <option value="poison">poison</option>
-            <option value="ground">ground</option>
-            <option value="flying">flying</option>
-            <option value="psychic">psychic</option>
-            <option value="bug">bug</option>
-            <option value="rock">rock</option>
-            <option value="ghost">ghost</option>
-            <option value="dragon">dragon</option>
-            <option value="dark">dark</option>
-            <option value="steel">steel</option>
-            <option value="fairy">fairy</option>
+            <option className="option-font option" value="all">
+              All
+            </option>
+            <option className="option-font option" value="fire">
+              fire
+            </option>
+            <option className="option-font option" value="water">
+              water
+            </option>
+            <option className="option-font option" value="grass">
+              grass
+            </option>
+            <option className="option-font option" value="electric">
+              electric
+            </option>
+            <option className="option-font option" value="normal">
+              normal
+            </option>
+            <option className="option-font option" value="ice">
+              ice
+            </option>
+            <option className="option-font option" value="fighting">
+              fighting
+            </option>
+            <option className="option-font option" value="poison">
+              poison
+            </option>
+            <option className="option-font option" value="ground">
+              ground
+            </option>
+            <option className="option-font option" value="flying">
+              flying
+            </option>
+            <option className="option-font option" value="psychic">
+              psychic
+            </option>
+            <option className="option-font option" value="bug">
+              bug
+            </option>
+            <option className="option-font option" value="rock">
+              rock
+            </option>
+            <option className="option-font option" value="ghost">
+              ghost
+            </option>
+            <option className="option-font option" value="dragon">
+              dragon
+            </option>
+            <option className="option-font option" value="dark">
+              dark
+            </option>
+            <option className="option-font option" value="steel">
+              steel
+            </option>
+            <option className="option-font option" value="fairy">
+              fairy
+            </option>
           </select>
         </div>
         <div className="pokemon-list">

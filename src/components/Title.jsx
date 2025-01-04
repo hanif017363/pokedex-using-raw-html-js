@@ -5,7 +5,9 @@ export default function Title() {
     <div>
       <div className="heading">
         <img className="heading-logo" src={pokeball} alt="pokeball_img" />
-        <h1 className="heading-title">Pokédex</h1>
+        <h1 className="heading-title">
+          Poké<span className="heading-highlight">dex</span>
+        </h1>
       </div>
     </div>
   );
