@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export const AppCtx = createContext();
 
 export default function AppProvider({ children }) {
-  const MAX_POKEMON = 649;
+  const MAX_POKEMON = 20;
   const [inputText, setInputText] = useState("");
   const [pokemons, setPokemons] = useState(null);
   const [filter, setFilter] = useState("all");
@@ -16,10 +16,10 @@ export default function AppProvider({ children }) {
       `https://pokeapi.co/api/v2/pokemon?limit=${MAX_POKEMON}`
     );
     const data = await res.json();
-    console.log(data);
 
     const pokemonList = await Promise.all(
       data.results.map(async (pokemon) => {
+        1;
         const res = await fetch(pokemon.url);
         const data = await res.json();
 
@@ -96,24 +96,24 @@ export default function AppProvider({ children }) {
   }, [filter, inputText, pokemons]);
 
   const typeColors = {
-    fire: "red",
-    water: "blue",
-    grass: "green",
-    electric: "yellow",
-    normal: "gray",
-    ice: "cyan",
-    fighting: "brown",
-    poison: "purple",
-    ground: "saddlebrown",
-    flying: "skyblue",
-    psychic: "pink",
-    bug: "olive",
-    rock: "darkgray",
-    ghost: "indigo",
-    dragon: "gold",
-    dark: "black",
-    steel: "silver",
-    fairy: "hotpink",
+    normal: "#A8A878",
+    fire: "#F08030",
+    water: "#6890F0",
+    electric: "#F8D030",
+    grass: "#78C850",
+    ice: "#98D8D8",
+    fighting: "#C03028",
+    poison: "#A040A0",
+    ground: "#E0C068",
+    flying: "#A890F0",
+    psychic: "#F85888",
+    bug: "#A8B820",
+    rock: "#B8A038",
+    ghost: "#705898",
+    dragon: "#7038F8",
+    dark: "#705848",
+    steel: "#B8B8D0",
+    fairy: "#EE99AC",
   };
   const value = {
     inputText,
