@@ -14,7 +14,7 @@ export default function PokemonList() {
       <div className="body-wrapper">
         <Filter setFilter={setFilter} />
         <div className="pokemon-list">
-          {pokemons ? (
+          {pokemons && pokemons.length > 0 ? (
             pokemons.map((pokemon) => (
               <div className="pokemon" key={pokemon.id}>
                 <div className="pokemon-body">
@@ -26,7 +26,7 @@ export default function PokemonList() {
                       <p className="id-color">#{pokemon.id}</p>
                       <i
                         className={`fa-heart ${
-                          favorites.includes(pokemon.id)
+                          favorites?.includes(pokemon.id)
                             ? "fa-solid favorited"
                             : "fa-regular"
                         }`}
@@ -89,7 +89,10 @@ export default function PokemonList() {
               </div>
             ))
           ) : (
-            <p className="no-pokemon">No Pokemon Found</p>
+            <div className="no-pokemon-box">
+              <p className="no-pokemon">No Pokemon Found...</p>
+              <p className="no-pokemon">( ︶︿︶)_╭∩╮</p>
+            </div>
           )}
         </div>
       </div>

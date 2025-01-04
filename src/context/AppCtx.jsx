@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext } from "react";
 import { useEffect, useState } from "react";
@@ -5,12 +6,13 @@ import { useEffect, useState } from "react";
 export const AppCtx = createContext();
 
 export default function AppProvider({ children }) {
-  const MAX_POKEMON = 20;
+  const MAX_POKEMON = 4;
   const [inputText, setInputText] = useState("");
   const [pokemons, setPokemons] = useState(null);
   const [filter, setFilter] = useState("all");
   const [filteredPokemons, setFilteredPokemons] = useState(null);
   const [favorites, setFavorites] = useState([]);
+  const [currentImage, setCurrentImage] = useState(null);
   const getPokemon = async () => {
     const res = await fetch(
       `https://pokeapi.co/api/v2/pokemon?limit=${MAX_POKEMON}`
@@ -26,8 +28,13 @@ export default function AppProvider({ children }) {
         const datas = {
           id: data.id,
           name: data.name,
+          fimage: data.sprites.front_default,
+          bimage: data.sprites.back_default,
+          sfimage: data.sprites.front_shiny,
+          sbimage: data.sprites.back_shiny,
           types: data.types.map((type) => type.type.name),
         };
+
         return datas;
       })
     );
@@ -124,7 +131,8 @@ export default function AppProvider({ children }) {
     typeColors,
     pokemons: filteredPokemons,
     favorites,
-
+    currentImage,
+    setCurrentImage,
     toggleFavorite,
   };
 
