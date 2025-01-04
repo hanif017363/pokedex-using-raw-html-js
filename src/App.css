@@ -253,7 +253,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
   .filter-body {
-    width: 93.8%;
+    width: 96%;
   }
   .filter-wrapper {
     text-align: end;
