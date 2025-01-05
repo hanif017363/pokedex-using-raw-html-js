@@ -8,7 +8,7 @@ import { AppCtx } from "../context/AppCtx";
 export default function Search() {
   const { inputText, setInputText } = useContext(AppCtx);
   return (
-    <div className="search-wrapper">
+    <div className="search-wrapper ">
       <div className="search-wrap">
         <img className="search-img" src={search} alt="" />
 

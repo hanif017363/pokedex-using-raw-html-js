@@ -11,11 +11,12 @@ export const router = createBrowserRouter([
     element: <Root />,
     children: [
       { index: true, element: <App /> },
-      { path: "/pokemon/:postId", element: <DetailPokemon /> },
+
       {
         path: "/favourite",
         element: <Favourite />,
       },
     ],
   },
+  { path: "/pokemon/:postId", element: <DetailPokemon /> },
 ]);

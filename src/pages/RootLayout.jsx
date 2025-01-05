@@ -1,6 +1,7 @@
 import Search from "../components/Search";
 import Title from "../components/Title";
 import "../App.css";
+
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 

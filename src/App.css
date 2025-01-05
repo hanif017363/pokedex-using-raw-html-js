@@ -46,7 +46,7 @@ body {
 }
 .input-box {
   outline: 0;
-  border: 1px red solid;
+  border: 3px red solid;
   padding: 0.3rem 2rem;
   border-radius: 1rem;
 
@@ -152,6 +152,7 @@ body {
   color: #fff;
   margin: 1rem;
   transition: color 0.3s ease;
+  font-size: 1.5rem;
 }
 
 .fa-heart.favorited {
@@ -159,6 +160,7 @@ body {
   background-color: red;
   background-clip: text;
   animation: pop 0.3s ease-in-out;
+  font-size: 2rem;
 }
 
 @keyframes pop {
@@ -293,6 +295,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* details page start */
+
+/* details page end */
 
 /* pokemon main card body end */
 /* 600px */

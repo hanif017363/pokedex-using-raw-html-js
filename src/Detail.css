@@ -1,0 +1,156 @@
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.detail-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.back-btn {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.detail-id {
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+.detail-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", serif;
+  padding-bottom: 1rem;
+}
+.detail-upper-body {
+  height: 380px;
+}
+.detail-pokemon-name {
+  font-family: "Orbitron", serif;
+  color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+.detail-img-wrapper {
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+.detail-img {
+  width: 100%;
+}
+.detail-lower-body-wrap {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 6px solid #ece6e6;
+}
+p {
+  margin: 0;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sm-cur-wrapper {
+  width: 100%;
+}
+.sm-img-cur-box {
+  height: 120px;
+  width: 120px;
+  background: linear-gradient(45deg, #000000, #ffd700, #000000);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.6);
+}
+.sm-img-cur {
+  height: 80%;
+  width: 80%;
+  background-color: #000000;
+}
+.sm-img-wrapper {
+  width: 50px;
+  height: 50px;
+}
+.sm-img {
+  width: 100%;
+  height: 100%;
+}
+.progress-wrapper {
+  margin-bottom: 1rem;
+}
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.progress {
+  width: 90%;
+}
+@media (min-width: 600px) {
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70%;
+  }
+
+  .progress {
+    width: 90%;
+  }
+  .img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sm-img-cur-box {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+  }
+
+  .progress {
+    width: 90%;
+  }
+  .back-btn {
+    font-size: 3rem;
+  }
+  .detail-id {
+    font-size: 3rem;
+  }
+  .detail-upper-body {
+    min-height: 400px;
+  }
+  .row-header {
+    justify-content: space-around;
+  }
+}
