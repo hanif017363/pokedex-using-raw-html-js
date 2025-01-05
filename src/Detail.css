@@ -43,7 +43,7 @@
   margin: 0 auto;
 }
 .detail-img {
-  width: 100%;
+  width: 80%;
 }
 .detail-lower-body-wrap {
   background-color: #fff;
@@ -108,6 +108,17 @@ p {
 
 .progress {
   width: 90%;
+}
+.loading-box {
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-box p {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #fff;
 }
 @media (min-width: 600px) {
   .progress-bar {

@@ -146,7 +146,9 @@ export default function DetailPokemon() {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="loading-box">
+          <p>Loading...</p>
+        </div>
       )}
     </div>
   );
