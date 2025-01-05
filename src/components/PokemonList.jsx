@@ -12,7 +12,7 @@ export default function PokemonList() {
   return (
     <div>
       <div className="body-wrapper">
-        <Filter setFilter={setFilter} />
+        <Filter setFilter={setFilter} pokemons={pokemons} />
         <div className="pokemon-list">
           {pokemons && pokemons.length > 0 ? (
             pokemons.map((pokemon) => (

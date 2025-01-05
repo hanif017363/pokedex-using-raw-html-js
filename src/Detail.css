@@ -43,7 +43,7 @@
   margin: 0 auto;
 }
 .detail-img {
-  width: 80%;
+  width: 60%;
 }
 .detail-lower-body-wrap {
   background-color: #fff;
@@ -118,7 +118,7 @@ p {
 .loading-box p {
   font-size: 6rem;
   font-weight: 900;
-  color: #fff;
+  color: #ffd700;
 }
 @media (min-width: 600px) {
   .progress-bar {
