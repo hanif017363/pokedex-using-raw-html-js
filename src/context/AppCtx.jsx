@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export const AppCtx = createContext();
 
 export default function AppProvider({ children }) {
-  const MAX_POKEMON = 650;
+  const MAX_POKEMON = 150;
   const [inputText, setInputText] = useState("");
   const [pokemons, setPokemons] = useState(null);
   const [filter, setFilter] = useState("all");
